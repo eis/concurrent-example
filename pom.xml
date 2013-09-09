@@ -8,7 +8,7 @@
 	<packaging>jar</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 	<description>
-    Simple example of a Spring publisher. This is very heavily based on
+	Simple example of a Spring publisher. This is very heavily based on
 	the example provided by Oracle in
 	http://docs.oracle.com/javase/tutorial/uiswing/concurrency/interim.html
 	</description>
