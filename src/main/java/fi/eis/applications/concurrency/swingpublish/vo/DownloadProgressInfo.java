@@ -1,18 +1,18 @@
 package fi.eis.applications.concurrency.swingpublish.vo;
 
 public class DownloadProgressInfo {
-	private static long total;
-    private final long current;
+    private final int current;
+	private final long total;
 
-    public DownloadProgressInfo(long current) {
+    public DownloadProgressInfo(int current, long total) {
         this.current = current;
-        DownloadProgressInfo.total += current;
+        this.total = total;
     }
     
     public long getCurrent() {
     	return this.current;
     }
     public long getTotal() {
-    	return DownloadProgressInfo.total;
+    	return this.total;
     }
 }

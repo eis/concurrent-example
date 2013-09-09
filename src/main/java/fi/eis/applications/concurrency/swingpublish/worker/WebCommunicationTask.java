@@ -39,9 +39,11 @@ public class WebCommunicationTask extends
 
 			byte data[] = new byte[1024];
 			int count;
+			long total = 0;
 			while ((count = in.read(data, 0, 1024)) != -1 && !isCancelled()) {
 				fout.write(data, 0, count);
-				publish(new DownloadProgressInfo(count));
+				total += count;
+				publish(new DownloadProgressInfo(count, total));
 			}
 		} catch (IOException e) {
 			// no-op
